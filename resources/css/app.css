@@ -1,0 +1,489 @@
+@import '/node_modules/fontawesome-free/css/all.min.css';
+@import './jquery.toast.css';
+@import 'car-makes-icons/dist/style.css';
+@import '/node_modules/jquery-ui/dist/themes/base/jquery-ui.css';
+
+
+/* Reset some default styles for better consistency */
+:root {
+    /* Bleu */
+    --blueheader: #004aad;
+    --report: rgb(0, 95, 219);
+    --blueForms: rgb(115, 164, 255);
+    --greenbutton: #27ae5f00;
+    --greenbuttonhover: rgba(0, 159, 0, 0);
+    --notification-color: rgb(12, 85, 232);
+    --mobileWidth: 768px;
+    --linearGradiantBlue:linear-gradient(to left, #006eff, #004aad);
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body,
+h1,
+ul,
+li {
+    margin: 0;
+    padding: 0;
+}
+
+/* Style the header */
+.header {
+    background-color: blue;
+    /* Blue background color */
+    color: white;
+    /* White text color */
+    padding: 10px 0;
+}
+
+/* Center the header content */
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Style the website title (h1) */
+@media (max-width: var(--mobileWidth)) {
+    .header-container>a>h1 {
+        font-size: 1.2rem;
+    }
+}
+
+.header h1 {
+    font-size: 24px;
+}
+
+
+/* Style the navigation menu */
+.nav ul {
+    list-style-type: none;
+}
+
+.nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+.nav ul li a {
+    color: white;
+    /* White link text color */
+    text-decoration: none;
+    transition: .2s ease;
+    border-bottom: 2px solid rgba(255, 255, 255, 0);
+
+    &:hover {
+        border-bottom: 2px solid white;
+        /* font-size: 1.1rem; */
+        transition: .2s;
+    }
+}
+
+/* Style the login button */
+
+
+.redlogout-button:hover {
+    font-weight: bolder;
+    transition: .2s;
+    transform: scale(1.05);
+}
+
+.btn-disconnect {
+    background-color: transparent;
+    border: none;
+    color: inherit;
+    padding: 0;
+}
+
+.login-button {
+    background-color: var(--greenbutton);
+    /* Vert */
+    color: white;
+    padding: .8rem 2rem;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.login-button:hover {
+    background-color: var(--greenbuttonhover);
+    font-weight: bolder;
+    transition: .2s;
+    transform: scale(1.5);
+}
+
+
+
+/* Reset some default styles for better consistency */
+body,
+h1,
+ul,
+li {
+    margin: 0;
+    padding: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/* Styles pour l'en-tête */
+header{
+    background-image: linear-gradient(to left, #006eff, #004aad);
+    color: white;
+    padding: 20px 0;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 90%;
+    margin: 0 auto;
+    padding: 0 20px;
+
+}
+
+h1 {
+    font-size: 24px;
+}
+
+.nav ul {
+    list-style-type: none;
+}
+
+.nav ul li {
+    display: inline;
+    margin-right: 1rem;
+    margin-left: 1rem;
+    /* text-align: center; */
+}
+
+.nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+
+
+.menu-icon {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 3px 0;
+}
+
+.ul-menu {
+    display: flex;
+}
+
+#btn-deco-mobile {
+    display: none !important;
+}
+
+/* menu hamberger pour mobile */
+@media (max-width: 1200px) {
+    .app-name {
+        margin: auto;
+    }
+
+    .nav ul {
+        display: none;
+        flex-direction: column;
+        background-color: #243a7a;
+        /* Fond du menu hamburger */
+        position: absolute;
+        top: 4rem;
+        right: 0;
+        left: 0;
+        transition: .2s;
+        font-weight: lighter;
+    }
+
+    .nav ul.active {
+        display: flex;
+        z-index: 100;
+        /* transition: .2s;
+        font-weight: lighter;
+        top: 85px;
+        width: auto;
+        background-image: linear-gradient(to left, #006eff, #004aad); */
+    }
+
+    .nav li {
+        font-size: 20px;
+        padding: 15px;
+    }
+
+    .menu-icon {
+        display: flex;
+        transition: .2s;
+        flex-direction: column;
+    }
+
+    .ul-menu {
+        transition: .2s;
+        font-weight: lighter;
+        top: 85px !important;
+        width: auto;
+        background-image: linear-gradient(to left, #006eff, #004aad);
+    }
+
+    #btn-deco-desktop {
+        display: none !important;
+    }
+
+    #btn-deco-mobile {
+        display: block !important;
+    }
+}
+
+
+/* ICI C HUMAIN vvv */
+
+#xtitle {
+    margin: auto;
+    text-align: center;
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 36px;
+    color: #232628;
+}
+
+.notification {
+    font-family: system-ui, sans-serif;
+    color: black !important;
+    font-size: 1rem;
+    line-height: 1.1;
+    display: grid;
+    grid-template-columns: 1em auto;
+    gap: 0.5em;
+}
+
+input[type="checkbox"] {
+    /* https://moderncss.dev/pure-css-custom-checkbox-style/ */
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: #fff;
+    float: left;
+
+    margin-left: -1.3em;
+    margin-top: 0.20em;
+    font: inherit;
+    color: currentColor;
+    width: 1.05em;
+    height: 1.05em;
+    border: 0.15em solid currentColor;
+    border-radius: 0.15em;
+    transform: translateY(-0.075em);
+    display: grid;
+    place-content: center;
+}
+
+input[type="checkbox"]::before {
+    content: "";
+    width: 0.65em;
+    height: 0.65em;
+    transform: scale(0);
+    transition: 120ms transform ease-in-out;
+    box-shadow: inset 1em 1em var(--notification-color);
+}
+
+input[type="checkbox"]:checked::before {
+    transform: scale(1);
+    /* content: "✓"; make content have a checkmark */
+
+}
+
+input[type="checkbox"]:checked {
+    transform: scale(1);/* content: "✓"; make content have a checkmark */
+}
+
+.erreur {
+    color: red;
+    font-weight: bold;
+    overflow-wrap: break-word;
+}
+
+
+/* Filters */
+#orderby-list>* {
+    margin: 10px 0;
+}
+
+.hidden {
+    display: none;
+}
+
+#page_filtre {
+    display: block;
+    min-height: 100%;
+    background-color: var(--blueheader);
+    color: white;
+}
+
+/* from font awesome site */
+/* Step 1: Common Properties: All required to make icons render reliably */
+.icon::before {
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Step 2: Reference Individual Icons */
+.arrow-asc::before {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 700;
+    color: greenyellow;
+    content: "\f163";
+}
+
+/* Note: Make sure to include the correct weight and Unicode value for the icon */
+.arrow-desc::before {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 700;
+    color: rgb(231, 148, 5);
+    content: "\f886";
+}
+
+.selected-element {
+    background-color: white;
+    color: black;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+.sticky-sidebar {
+    position: fixed;
+    top: 88px;
+    left: 0px;
+
+}
+
+
+
+@media (max-width:800px) {
+
+    .sticky-sidebar {
+        position: absolute;
+    }
+
+    #page_filtre {
+        display: none;
+        top: 0;
+    }
+
+    #menu,
+    #menu+* {
+        padding-top: 40px;
+    }
+
+    .content {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #btn-search div:first-child {
+        width: 60% !important;
+        justify-content: end !important;
+        font-size: 25px;
+    }
+
+    #btn-search div:last-child {
+        justify-content: start !important;
+        font-size: 25px;
+    }
+
+    #close_page_filters {
+        justify-content: center !important;
+    }
+}
+
+@media (min-width: 800px) {
+    .scroll::-webkit-scrollbar {
+        width: .5em;
+    }
+
+    .scroll::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    }
+
+    .scroll::-webkit-scrollbar-thumb {
+        background: black;
+    }
+
+
+    #orderby-list{
+        font-size: 14px;
+    }
+
+    .scroll {
+        font-size: 14px;
+        max-height: 100px;
+        overflow-x: hidden;
+        overflow-y: auto;
+        scrollbar-width: none;
+        scrollbar-gutter: stable;
+    }
+
+    #filters-wrapper>* {
+        height: 100%;
+        max-width: 250px;
+        margin-left: 0;
+        /* position: fixed;*/
+        padding-top: 0px;
+
+    }
+
+    header {
+        z-index: 1;
+    }
+
+    .content {
+        margin-top: 105px;
+        margin-left: 22%;
+        margin-right: auto;
+        /* height: 500px;
+        display: block;
+        overflow-y: auto; */
+
+    }
+
+    #menu {
+        display: none;
+    }
+
+    #close_page_filters {
+        display: none !important;
+    }
+
+    #btn-search {
+        width: 262px;
+        float: left;
+        font-size: 25px;
+
+    }
+}
+footer{
+    font-size: 19px;
+}

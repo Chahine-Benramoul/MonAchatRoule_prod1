@@ -1,0 +1,163 @@
+:root{
+    --paddingLeftForm: 1.5rem;
+}
+.signForm {
+    width: 90%;
+    max-width: 600px;
+    margin: auto;
+    font-size: 1.2rem;
+
+}
+.signForm>p.petitp{ /* veuillez remplir vos ...*/
+    text-align: center;
+
+    font-size: 1.5rem;
+    font-weight: bolder;
+}
+
+input{
+    /* width: 200px;
+    padding-top: .3rem;
+    padding-bottom: .3rem;
+    padding-left: .5rem;
+    font-weight: 800;
+    display: inline-block;   */
+    max-width: 330px;
+    border: none;
+    outline: solid gray 1px;
+    background: #f1f1f1;
+    font-weight:lighter;
+}
+
+input[type=text]:focus,
+input[type=password]:focus {
+    background-color: #d3d3d3;
+    outline: none;
+}
+select{ margin-left: var(--paddingLeftForm); }
+
+.registerbtn {
+    background-color: var(--greenbutton);
+    color: white;
+    padding: .7rem 2rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    border: none;
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: .5rem;
+    border-radius: 1rem;
+    transition: .1s;
+    z-index: 1;
+}
+
+.registerbtn:hover {
+    font-weight: bolder;
+    box-shadow: 0px 0px 1.2em rgba(0, 0, 0, 0.281);
+    border: greenyellow solid 3px;
+    outline-offset: 2px;
+    transition:.1s;
+    background-color: var(--greenbuttonhover);
+}
+
+.signin {
+    background-color: #f1f1f1;
+    text-align: center;
+}
+
+a {
+    color: dodgerblue;
+}
+
+@media (max-width: 600px) {
+    div#signForm {
+        margin-right: auto;
+        margin-left: auto;
+        width: 95%;
+        height: 400px;
+    }
+}
+
+.blue-block{
+    display:inline-block;
+    position: relative;
+    top: .85rem;
+    left: .28rem;
+    background-color: #0084CE;
+    /* background-image: url("../../public/images/majesticons/solid/mail.svg"); */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 40%;
+    width: 50px;
+    height: 38px;
+}
+.icon{
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    -webkit-mask-size: 60%;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: 60%;
+
+}
+.icon-mail{
+    -webkit-mask-image: url("../../public/images/majesticons/solid/mail.svg");
+    mask-image: url("../../public/images/majesticons/solid/mail.svg");
+}
+.icon-password{
+    -webkit-mask-image: url("../../public/images/majesticons/solid/lock.svg");
+    mask-image: url("../../public/images/majesticons/solid/lock.svg");
+}
+.icon-user{
+    -webkit-mask-image: url("../../public/images/majesticons/solid/user.svg");
+    mask-image: url("../../public/images/majesticons/solid/user.svg");
+}
+.icon-phone{
+    -webkit-mask-image: url("../../public/images/majesticons/solid/phone.svg");
+    mask-image: url("../../public/images/majesticons/solid/phone.svg");
+}
+.icon-toggle-password{
+    -webkit-mask-image: url("../../public/images/majesticons/solid/phone.svg");
+    mask-image: url("../../public/images/majesticons/solid/phone.svg");
+}
+#togglePassword{
+    margin-top: 4px;
+    margin-left: -35px;
+}
+.notification{
+    color: black;
+}
+hr{
+    /* https://www.w3docs.com/snippets/css/how-to-style-a-horizontal-line.html */
+    width: 22rem;
+    border-width: 2px ;
+    margin-left: auto;
+    margin-right: auto;
+}
+.grid-icon-input{
+    display: grid;
+    grid-template-columns:35px auto;
+    column-gap:0px;
+}
+.icon-in-grid{
+    margin: .5em .3em;
+    color:var(--blueheader);
+}
+.erreur{
+   margin: none !important;
+
+}
+.info{
+    margin: 0.5em 0em 0em 2.5em !important;
+    min-height: 1em;
+    content: "&nbsp;";
+}
+body{
+    /* height: 1250px; */
+}
+#toggleShowPassword{
+    color: var(--blueheader);
+    margin-top: 10px;
+    margin-left: -25px;
+}
