@@ -151,6 +151,7 @@
 <body>
     @include('partials.xheader')
 
+    <div style="min-height:90px;"></div>
 
     <h1 id="xtitle">
         @yield('title'){{-- ici on mettra le nom de la page, doit etre défini dans le yield  --}}
