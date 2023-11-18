@@ -5,14 +5,14 @@ document.addEventListener("DOMContentLoaded", function () {
     
     window.onscroll = function () {
         myFunction();
-        //myFunction2();
-        //console.log('scroll');
+        
+        console.log('scroll');
     };
     $(window).on("resize", function (ev) {
         const viewPortDesktopWidth = 769;
         let width = $(window).width();
         let height = $(window).height();
-        //console.log('resize', $(window).width(), $(window).height());
+        console.log('resize', $(window).width(), $(window).height());
         myFunction();
     });
     // Get the header
