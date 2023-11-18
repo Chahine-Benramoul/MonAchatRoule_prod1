@@ -4,14 +4,9 @@
 @section('title')
     <h1 id="xtitle">Création de compte</h1>
 @endsection
-<script type="module">
-    import initFormValidation from './validation.js';
-    $(()=>{
-        
-        initFormValidation();
+@push('js')
 
-    })
-</script>
+@endpush
 @section('content')
     <form action="/register" method="POST" style="width:350px; margin:auto;">
         @csrf
