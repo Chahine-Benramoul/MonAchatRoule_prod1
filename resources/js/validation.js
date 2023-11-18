@@ -1,13 +1,14 @@
 /* https://regex-generator.olafneumann.org/ vraiment cool*/
 /* String.raw pour ne pas interpréter les "\" */
 // Auteur: Professeur Nicolas Chourot du Collège Lionel-Groulx
-//https://www.npmjs.com/package/jquery.maskedinput
+// https://www.npmjs.com/package/jquery.maskedinput
 
 
 let defaultRequireMessage = "Obligatoire";
 let defaultInvalidMessage = "Format invalide";
 let defaultCustomErrorMessage = "Champ invalide";
 let passwordTooShortMessage = `Le mot de passe doit faire aumoins 7 caractères`;
+
 function initFormValidation() {
     $(".Alpha").each(function () {
         $(this).attr("pattern", String.raw`^[a-zA-Z\- 'ààâäæáãåāèéêëęėēîïīįíìôōøõóòöœùûüūúÿçćčńñÀÂÄÆÁÃÅĀÈÉÊËĘĖĒÎÏĪĮÍÌÔŌØÕÓÒÖŒÙÛÜŪÚŸÇĆČŃÑ]*$`);

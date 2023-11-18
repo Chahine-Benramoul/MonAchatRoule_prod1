@@ -56,6 +56,7 @@
 //
 /////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+import './validation';
 let missingFileErrorMessage = "Veuillez sélectionner une image.";
 let maxImageSize = 15000000;
 var currentId = 0;
