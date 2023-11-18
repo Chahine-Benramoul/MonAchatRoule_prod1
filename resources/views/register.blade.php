@@ -5,7 +5,7 @@
     <h1 id="xtitle">Création de compte</h1>
 @endsection
 @push('js')
-
+    <script type="text/javascript" src="{{ URL::asset ('js/validation.js') }}"></script>
 @endpush
 @section('content')
     <form action="/register" method="POST" style="width:350px; margin:auto;">
