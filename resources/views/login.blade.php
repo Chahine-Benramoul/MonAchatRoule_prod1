@@ -1,7 +1,8 @@
 @extends('partials.xlayout')
 
 
-@section('title','Accédez à votre compte')
+@section('title')
+    <div id="xtitle">Accédez à votre compte</div>
 @endsection
 
 @section('content')
@@ -11,7 +12,8 @@
             <label for="email" class="form-label">Courriel</label>
             <div class="grid-icon-input">
                 <i class="fas fa-envelope fa-lg icon-in-grid"></i>
-                <input type="email" class="form-control" name="email" id="email" value="{{ old('email') }}" required>
+                <input type="email" class="form-control" name="email" id="email" value="{{ old('email') }}"
+                    required>
             </div>
             <div class="info">
                 @error('email')
@@ -38,5 +40,4 @@
     <div class="mb-3 signForm signin mt-5">
         <p>Pas encore de compte?<a href="{{ url('/register') }}"><br> Inscrivez-vous</a>.</p>
     </div>
-
 @endsection

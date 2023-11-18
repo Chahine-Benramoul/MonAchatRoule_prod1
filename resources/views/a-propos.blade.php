@@ -1,11 +1,8 @@
 @extends('partials.xlayout')
 
-
-
-
-    @section('title') 
+@section('title')
     <h1 id="xtitle">À propos </h1>
-    @endsection
+@endsection
 
 @section('content')
     <!DOCTYPE html>
@@ -26,7 +23,11 @@
                 </div>
                 <div class="col-sm-8 text-start fs-5 mt-4 mb-4">
                     <p>
-                        MonAchatRoule a pour mission de connecter les acheteurs d'automobile aux bons vendeurs. On propose un système d'enchères permettant au vendeur de vendre au meilleur offrant. Les utilisateurs pourront trouver la voiture qui répond à leurs critères rapidement grâce à notre système de recherche. Les deux parties profiteront de notre messagerie en temps réel pour que leur expérience de vente et de magasinage soit complète.
+                        MonAchatRoule a pour mission de connecter les acheteurs d'automobile aux bons vendeurs. On propose
+                        un système d'enchères permettant au vendeur de vendre au meilleur offrant. Les utilisateurs pourront
+                        trouver la voiture qui répond à leurs critères rapidement grâce à notre système de recherche. Les
+                        deux parties profiteront de notre messagerie en temps réel pour que leur expérience de vente et de
+                        magasinage soit complète.
                     </p>
                 </div>
 

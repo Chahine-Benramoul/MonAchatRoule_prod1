@@ -1,6 +1,9 @@
 @extends('partials.xlayout')
 
-@section('title', 'Centre de notification')
+
+@section('title')
+    <h1 id="xtitle">Centre de notification</h1>
+@endsection
 
 @include('partials.xhelper')
 

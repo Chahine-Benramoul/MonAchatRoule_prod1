@@ -9,7 +9,10 @@
 
 
 
-@section('title', 'Profil de ' . $user->getDisplayName())
+@section('title')
+<h1 id="xtitle">Profil de {{$user->getDisplayName()}}</h1>
+@endsection
+
 @section('content')
     <div class="userp mt-5">
     @include('partials.profilDiv')

@@ -2,8 +2,10 @@
 @php
     use Illuminate\Support\Facades\Auth;
 @endphp
-@section('title', "Gestion d'images")
-{{-- valeur possible: $pid, $isEdit --}}
+
+@section('title')
+    <h1 id="xtitle">Gestion d'images</h1>
+@endsection
 @section('content')
 
     <body>
@@ -57,14 +59,14 @@
                 @endif
 
                 <hr class="my-3">
-                
+
                 <div class="text-wrap">
                     <h2>Ajoutez des images à votre annonce</h2>
                 </div>
                 <span id="upload-input-container" style="margin:auto;width:fit-content">
-                    <input type="file" id="image-input" name="images[]" accept="image/*" multiple onclick="addInput(this)"
-                    onchange="handleImageUpload(this)"
-                    style="margin:10px 0px 10px 0px; opacity:0;position:relative;z-index:-1;display:none;">
+                    <input type="file" id="image-input" name="images[]" accept="image/*" multiple
+                        onclick="addInput(this)" onchange="handleImageUpload(this)"
+                        style="margin:10px 0px 10px 0px; opacity:0;position:relative;z-index:-1;display:none;">
                     <label id="label-image-input" class="buttonEffect p-1" for="image-input">Téléverser</label>
                 </span>
                 <span class="image-container mt-3" id="new-images" style="gap:1em;"></span>
@@ -74,7 +76,7 @@
             <div id="displayFileNames"></div>
 
             {{-- <br>{{ Auth::user()->publications }} --}}
-            
+
 
             {{-- <button class="buttonEffect" type="button" onclick="document.getElementById('image-input').click();">Téléverser
                 des images</button> --}}
@@ -172,7 +174,7 @@
                                     imageContainer.removeChild(imagePreview);
                                     // If is multi image upload
                                     console.log(obj.files);
-                                    
+
                                     removeFileFromFileList(file.name, obj);
                                     console.log(obj.files);
                                 });

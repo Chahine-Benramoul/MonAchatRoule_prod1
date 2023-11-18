@@ -153,11 +153,8 @@
 
     <div style="min-height:90px;"></div>
 
+    @yield('title'){{-- ici on mettra le nom de la page, doit etre défini dans le yield  --}}
     
-     @yield('title'){{-- ici on mettra le nom de la page, doit etre défini dans le yield  --}}
-    
-
-
     @yield('content')
 
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>

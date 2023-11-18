@@ -12,12 +12,14 @@
     }
 @endphp
 @extends('partials.xlayout')
-<h1 id="x-title">
-    @section('title', "$publication->title")
-</h1>
+@section('title')
+    <h1 id="x-title">
+        {{$publication->title}}
+    </h1>
+@endsection
 @section('content')
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <!--BODY-->
     @php
         use Illuminate\Support\Facades\Auth;
@@ -85,8 +87,8 @@
                         <div class="image-buttons">
                             <button id="arrowLeft" class="buttonArrow-left" title="Image précédente" id="prev-image">
                                 < </button>
-                            <button id="arrowRight" class="buttonArrow-right" title="Prohaine image"
-                            id="next-image">></button>
+                                    <button id="arrowRight" class="buttonArrow-right" title="Prohaine image"
+                                        id="next-image">></button>
                         </div>
                     </div>
                     @php
@@ -293,7 +295,8 @@
         <div class="car-info-item" style="margin: 1em;">
             <br>
             <h4 class="detail-info-text">Description</h4>
-            <p style="margin:0;word-break:break-all; padding:1em; text-align:left;line-height:1.5em;">{{ $publication->description }}</p>
+            <p style="margin:0;word-break:break-all; padding:1em; text-align:left;line-height:1.5em;">
+                {{ $publication->description }}</p>
             <br>
         </div>
         <div class="car-info ">

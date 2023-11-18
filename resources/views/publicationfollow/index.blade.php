@@ -1,6 +1,8 @@
 @extends('partials.xlayout')
-@section('title', "Annonces suivies")
 
+@section('title')
+<h1 id="xtitle">Annonces suivies</h1>
+@endsection
 @push('js')
     <script type='text/javascript'
         src='http://www.bing.com/api/maps/mapcontrol?callback=GetMap&key=AtND6We4q6ydLy0dVPwZ1NGD__tCGQzhVSIhMA4EQnSTMVgtOg9TwWhOYzYvVzVC'
