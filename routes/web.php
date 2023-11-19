@@ -225,3 +225,7 @@ Route::get('/api/publications/newest',function ()
 // Route for getting last notifications
 Route::get('/api/notifications',[NotificationController::class,"getUnsentNotifications"]
 );
+
+
+// admin
+Route::view('/admin/','admin/index');
