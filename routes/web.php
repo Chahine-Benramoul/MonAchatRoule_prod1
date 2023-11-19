@@ -11,12 +11,12 @@ use App\Http\Controllers\PublicationController;
 use App\Http\Controllers\BidController;
 use App\Http\Controllers\NotificationController;
 use App\Http\Controllers\PublicationFollow;
+use App\Http\Controllers\SignalementController;
 use App\Http\Resources\PublicationResource;
 use App\Models\Publication;
 use App\Models\Image;
 use App\Models\notification;
-
-
+use App\Models\Signalement;
 
 /*
 |--------------------------------------------------------------------------
@@ -228,4 +228,4 @@ Route::get('/api/notifications',[NotificationController::class,"getUnsentNotific
 
 
 // admin
-Route::view('/admin/','admin/index');
+Route::get('/admin',[SignalementController::class,"index"]);
