@@ -1,0 +1,8 @@
+Si isblocked = 0 
+    affiché le btn bloquer
+    le form avec action bloquer
+    avant ajax verifier si user est bloque ou non 
+        choisir la bonne url 
+    lors de ajax avec success 
+        changer le form action dans html 
+        changer le url de l action ajax

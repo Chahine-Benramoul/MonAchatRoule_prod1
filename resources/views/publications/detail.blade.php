@@ -140,7 +140,7 @@
                     </a>
                 </div>
                 @auth
-                    @if (Auth::id() == $publication->user_id)
+                    @if (Auth::id() == $publication->user_id || User::find(Auth::id())->isAdmin())
                         <div title="Modifier l'annonce" class="div-button-actions" style="width:100%;">
                             <a class="noDec button-div" href="{{ route('publication.update', ['id' => $publication->id]) }}">
                                 <!--Ramener vers le controlleur pour ajouter un contact-->
